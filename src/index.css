@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: "Source Serif 4", Georgia, Cambria, "Times New Roman", Times, serif;
+    --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    
+    --color-bg: #FFFFFF;
+    --color-alt-bg: #FAFAF8;
+    --color-main: #222222;
+    --color-secondary: #666666;
+    --color-muted: #888888;
+    --color-link: #245B8F;
+    --color-link-hover: #173E63;
+    --color-divider: #E5E5E2;
+    --color-hover-bg: #F5F5F3;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-main);
+    font-family: var(--font-sans);
+    line-height: 1.7;
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    color: var(--color-main);
+    line-height: 1.25;
+    font-weight: 500;
+    letter-spacing: -0.015em;
+  }
+
+  p {
+    margin-bottom: 1rem;
+    color: var(--color-main);
+    line-height: 1.7;
+  }
+
+  a {
+    color: var(--color-link);
+    text-decoration: none;
+    transition: color 150ms ease-in-out;
+  }
+
+  a:hover {
+    color: var(--color-link-hover);
+  }
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 10.5pt !important;
+    line-height: 1.45 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  a {
+    color: #000000 !important;
+    text-decoration: none !important;
+  }
+  .print-break-inside-avoid {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
